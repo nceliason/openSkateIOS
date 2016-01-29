@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B25776D11C5B256C00BFE533 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25776D01C5B256C00BFE533 /* AppDelegate.swift */; };
+		B25776D31C5B256C00BFE533 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25776D21C5B256C00BFE533 /* ViewController.swift */; };
+		B25776D61C5B256C00BFE533 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25776D41C5B256C00BFE533 /* Main.storyboard */; };
+		B25776D81C5B256C00BFE533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25776D71C5B256C00BFE533 /* Assets.xcassets */; };
+		B25776DB1C5B256C00BFE533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25776D91C5B256C00BFE533 /* LaunchScreen.storyboard */; };
+		B25776E61C5B256C00BFE533 /* openSkateIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25776E51C5B256C00BFE533 /* openSkateIOSTests.swift */; };
+		B25776F11C5B256C00BFE533 /* openSkateIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25776F01C5B256C00BFE533 /* openSkateIOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B25776E21C5B256C00BFE533 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B25776C51C5B256C00BFE533 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B25776CC1C5B256C00BFE533;
+			remoteInfo = openSkateIOS;
+		};
+		B25776ED1C5B256C00BFE533 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B25776C51C5B256C00BFE533 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B25776CC1C5B256C00BFE533;
+			remoteInfo = openSkateIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B25776CD1C5B256C00BFE533 /* openSkateIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openSkateIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25776D01C5B256C00BFE533 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B25776D21C5B256C00BFE533 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B25776D51C5B256C00BFE533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B25776D71C5B256C00BFE533 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B25776DA1C5B256C00BFE533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B25776DC1C5B256C00BFE533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B25776E11C5B256C00BFE533 /* openSkateIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openSkateIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25776E51C5B256C00BFE533 /* openSkateIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openSkateIOSTests.swift; sourceTree = "<group>"; };
+		B25776E71C5B256C00BFE533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B25776EC1C5B256C00BFE533 /* openSkateIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openSkateIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25776F01C5B256C00BFE533 /* openSkateIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openSkateIOSUITests.swift; sourceTree = "<group>"; };
+		B25776F21C5B256C00BFE533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B25776CA1C5B256C00BFE533 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25776DE1C5B256C00BFE533 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25776E91C5B256C00BFE533 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B25776C41C5B256C00BFE533 = {
+			isa = PBXGroup;
+			children = (
+				B25776CF1C5B256C00BFE533 /* openSkateIOS */,
+				B25776E41C5B256C00BFE533 /* openSkateIOSTests */,
+				B25776EF1C5B256C00BFE533 /* openSkateIOSUITests */,
+				B25776CE1C5B256C00BFE533 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B25776CE1C5B256C00BFE533 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B25776CD1C5B256C00BFE533 /* openSkateIOS.app */,
+				B25776E11C5B256C00BFE533 /* openSkateIOSTests.xctest */,
+				B25776EC1C5B256C00BFE533 /* openSkateIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B25776CF1C5B256C00BFE533 /* openSkateIOS */ = {
+			isa = PBXGroup;
+			children = (
+				B25776D01C5B256C00BFE533 /* AppDelegate.swift */,
+				B25776D21C5B256C00BFE533 /* ViewController.swift */,
+				B25776D41C5B256C00BFE533 /* Main.storyboard */,
+				B25776D71C5B256C00BFE533 /* Assets.xcassets */,
+				B25776D91C5B256C00BFE533 /* LaunchScreen.storyboard */,
+				B25776DC1C5B256C00BFE533 /* Info.plist */,
+			);
+			path = openSkateIOS;
+			sourceTree = "<group>";
+		};
+		B25776E41C5B256C00BFE533 /* openSkateIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				B25776E51C5B256C00BFE533 /* openSkateIOSTests.swift */,
+				B25776E71C5B256C00BFE533 /* Info.plist */,
+			);
+			path = openSkateIOSTests;
+			sourceTree = "<group>";
+		};
+		B25776EF1C5B256C00BFE533 /* openSkateIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B25776F01C5B256C00BFE533 /* openSkateIOSUITests.swift */,
+				B25776F21C5B256C00BFE533 /* Info.plist */,
+			);
+			path = openSkateIOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B25776CC1C5B256C00BFE533 /* openSkateIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B25776F51C5B256C00BFE533 /* Build configuration list for PBXNativeTarget "openSkateIOS" */;
+			buildPhases = (
+				B25776C91C5B256C00BFE533 /* Sources */,
+				B25776CA1C5B256C00BFE533 /* Frameworks */,
+				B25776CB1C5B256C00BFE533 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = openSkateIOS;
+			productName = openSkateIOS;
+			productReference = B25776CD1C5B256C00BFE533 /* openSkateIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B25776E01C5B256C00BFE533 /* openSkateIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B25776F81C5B256C00BFE533 /* Build configuration list for PBXNativeTarget "openSkateIOSTests" */;
+			buildPhases = (
+				B25776DD1C5B256C00BFE533 /* Sources */,
+				B25776DE1C5B256C00BFE533 /* Frameworks */,
+				B25776DF1C5B256C00BFE533 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B25776E31C5B256C00BFE533 /* PBXTargetDependency */,
+			);
+			name = openSkateIOSTests;
+			productName = openSkateIOSTests;
+			productReference = B25776E11C5B256C00BFE533 /* openSkateIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B25776EB1C5B256C00BFE533 /* openSkateIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B25776FB1C5B256C00BFE533 /* Build configuration list for PBXNativeTarget "openSkateIOSUITests" */;
+			buildPhases = (
+				B25776E81C5B256C00BFE533 /* Sources */,
+				B25776E91C5B256C00BFE533 /* Frameworks */,
+				B25776EA1C5B256C00BFE533 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B25776EE1C5B256C00BFE533 /* PBXTargetDependency */,
+			);
+			name = openSkateIOSUITests;
+			productName = openSkateIOSUITests;
+			productReference = B25776EC1C5B256C00BFE533 /* openSkateIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B25776C51C5B256C00BFE533 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = openSkate;
+				TargetAttributes = {
+					B25776CC1C5B256C00BFE533 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HTB94838H4;
+					};
+					B25776E01C5B256C00BFE533 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HTB94838H4;
+						TestTargetID = B25776CC1C5B256C00BFE533;
+					};
+					B25776EB1C5B256C00BFE533 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HTB94838H4;
+						TestTargetID = B25776CC1C5B256C00BFE533;
+					};
+				};
+			};
+			buildConfigurationList = B25776C81C5B256C00BFE533 /* Build configuration list for PBXProject "openSkateIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B25776C41C5B256C00BFE533;
+			productRefGroup = B25776CE1C5B256C00BFE533 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B25776CC1C5B256C00BFE533 /* openSkateIOS */,
+				B25776E01C5B256C00BFE533 /* openSkateIOSTests */,
+				B25776EB1C5B256C00BFE533 /* openSkateIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B25776CB1C5B256C00BFE533 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25776DB1C5B256C00BFE533 /* LaunchScreen.storyboard in Resources */,
+				B25776D81C5B256C00BFE533 /* Assets.xcassets in Resources */,
+				B25776D61C5B256C00BFE533 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25776DF1C5B256C00BFE533 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25776EA1C5B256C00BFE533 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B25776C91C5B256C00BFE533 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25776D31C5B256C00BFE533 /* ViewController.swift in Sources */,
+				B25776D11C5B256C00BFE533 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25776DD1C5B256C00BFE533 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25776E61C5B256C00BFE533 /* openSkateIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B25776E81C5B256C00BFE533 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25776F11C5B256C00BFE533 /* openSkateIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B25776E31C5B256C00BFE533 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B25776CC1C5B256C00BFE533 /* openSkateIOS */;
+			targetProxy = B25776E21C5B256C00BFE533 /* PBXContainerItemProxy */;
+		};
+		B25776EE1C5B256C00BFE533 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B25776CC1C5B256C00BFE533 /* openSkateIOS */;
+			targetProxy = B25776ED1C5B256C00BFE533 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B25776D41C5B256C00BFE533 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B25776D51C5B256C00BFE533 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B25776D91C5B256C00BFE533 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B25776DA1C5B256C00BFE533 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B25776F31C5B256C00BFE533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B25776F41C5B256C00BFE533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B25776F61C5B256C00BFE533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = openSkateIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.openSkate.openSkateIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B25776F71C5B256C00BFE533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = openSkateIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.openSkate.openSkateIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B25776F91C5B256C00BFE533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = openSkateIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.openSkate.openSkateIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/openSkateIOS.app/openSkateIOS";
+			};
+			name = Debug;
+		};
+		B25776FA1C5B256C00BFE533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = openSkateIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.openSkate.openSkateIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/openSkateIOS.app/openSkateIOS";
+			};
+			name = Release;
+		};
+		B25776FC1C5B256C00BFE533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = openSkateIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.openSkate.openSkateIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = openSkateIOS;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B25776FD1C5B256C00BFE533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = openSkateIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.openSkate.openSkateIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = openSkateIOS;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B25776C81C5B256C00BFE533 /* Build configuration list for PBXProject "openSkateIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B25776F31C5B256C00BFE533 /* Debug */,
+				B25776F41C5B256C00BFE533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B25776F51C5B256C00BFE533 /* Build configuration list for PBXNativeTarget "openSkateIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B25776F61C5B256C00BFE533 /* Debug */,
+				B25776F71C5B256C00BFE533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B25776F81C5B256C00BFE533 /* Build configuration list for PBXNativeTarget "openSkateIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B25776F91C5B256C00BFE533 /* Debug */,
+				B25776FA1C5B256C00BFE533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B25776FB1C5B256C00BFE533 /* Build configuration list for PBXNativeTarget "openSkateIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B25776FC1C5B256C00BFE533 /* Debug */,
+				B25776FD1C5B256C00BFE533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B25776C51C5B256C00BFE533 /* Project object */;
+}
