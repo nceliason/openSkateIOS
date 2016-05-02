@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    var initialY: CGFloat = 0.0
-    var initialYToTop = 0
-    var initialYToBottom = 0
+    var initialTouchYCoord: CGFloat = 0.0
     let neutralZoneRange = 30
     
     override func viewDidLoad() {
@@ -23,21 +21,20 @@ class ViewController: UIViewController {
 
     @IBAction func panAction(sender: UIPanGestureRecognizer) {
         if sender.state == .Began {
-            initialY = sender.locationInView(self.view).y
-            print("initialY is \(initialY)")
+            initialTouchYCoord = sender.locationInView(self.view).y
         } else if sender.state == .Ended {
             label.text = "Accel: 0%"
         } else {
-            let viewHeight = self.view.frame.size.height
             let yLocation = sender.locationInView(self.view).y
-            let percentage: CGFloat
-            if yLocation < initialY {
-                percentage = (initialY - sender.locationInView(self.view).y) / initialY
+            let accelerationPercentage: CGFloat
+            if yLocation < initialTouchYCoord {
+                accelerationPercentage = (initialTouchYCoord - sender.locationInView(self.view).y) / initialTouchYCoord
             } else {
-                percentage = 0
+                let viewHeight = self.view.frame.size.height
+                accelerationPercentage = -((sender.locationInView(self.view).y - initialTouchYCoord) / (viewHeight - initialTouchYCoord))
             }
-            let intPercentage = Int(percentage * 100)
-            label.text = "Accel: \(String(intPercentage))%"
+            let accelerationPercentageInt = Int(accelerationPercentage * 100)
+            label.text = "Accel: \(String(accelerationPercentageInt))%"
         }
         
     }
