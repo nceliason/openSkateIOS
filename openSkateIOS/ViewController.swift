@@ -11,25 +11,36 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
+    var initialY: CGFloat = 0.0
+    var initialYToTop = 0
+    var initialYToBottom = 0
+    let neutralZoneRange = 30
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        let downSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-        
-        upSwipe.direction = .Up
-        downSwipe.direction = .Down
-        rightSwipe.direction = .Right
-        leftSwipe.direction = .Left
-        
-        view.addGestureRecognizer(upSwipe)
-        view.addGestureRecognizer(downSwipe)
-        view.addGestureRecognizer(rightSwipe)
-        view.addGestureRecognizer(leftSwipe)
     }
 
+    @IBAction func panAction(sender: UIPanGestureRecognizer) {
+        if sender.state == .Began {
+            initialY = sender.locationInView(self.view).y
+            print("initialY is \(initialY)")
+        } else if sender.state == .Ended {
+            label.text = "Accel: 0%"
+        } else {
+            let viewHeight = self.view.frame.size.height
+            let yLocation = sender.locationInView(self.view).y
+            let percentage: CGFloat
+            if yLocation < initialY {
+                percentage = (initialY - sender.locationInView(self.view).y) / initialY
+            } else {
+                percentage = 0
+            }
+            let intPercentage = Int(percentage * 100)
+            label.text = "Accel: \(String(intPercentage))%"
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,16 +48,6 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPress(sender: UIButton) {
         label.text = "new text"
-    }
-
-    @IBAction func handleSwipes(sender: UISwipeGestureRecognizer) {
-        if (sender.direction == .Up) {
-            label.text = "up"
-        }
-        else if (sender.direction == .Down) {
-            label.text = "down"
-        } else if (sender.direction == .Left){}
-        else if (sender.direction == .Right){}
     }
 }
 
