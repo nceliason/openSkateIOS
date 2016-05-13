@@ -13,9 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     var initialTouchYCoord: CGFloat = 0.0
     let neutralZoneRange: CGFloat = 30.0
+    var viewHeight: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewHeight = self.view.frame.size.height
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -26,16 +28,17 @@ class ViewController: UIViewController {
             label.text = "Accel: 0%"
         } else {
             let yLocation = sender.locationInView(self.view).y
-            let accelerationPercentage: CGFloat
+            var accelerationPercentage: CGFloat = 0.0
             let startPositiveYCoord = initialTouchYCoord - neutralZoneRange
             let startNegativeYCoord = initialTouchYCoord + neutralZoneRange
-            if yLocation < startPositiveYCoord {
-                accelerationPercentage = (startPositiveYCoord - sender.locationInView(self.view).y) / (startPositiveYCoord)
+            if yLocation < startPositiveYCoord && initialTouchYCoord > 3 * viewHeight/10 {
+                accelerationPercentage = (startPositiveYCoord - yLocation) / (startPositiveYCoord)
             } else if yLocation > startNegativeYCoord {
-                let viewHeight = self.view.frame.size.height
-                accelerationPercentage = -((sender.locationInView(self.view).y - startNegativeYCoord) / (viewHeight - startNegativeYCoord))
-            } else {
-                accelerationPercentage = 0.0
+                if initialTouchYCoord > 7 * (viewHeight/10) {
+                    accelerationPercentage = -((yLocation - startNegativeYCoord) / (viewHeight - startNegativeYCoord)) * 0.5
+                } else {
+                    accelerationPercentage = -((yLocation - startNegativeYCoord) / (viewHeight - startNegativeYCoord))
+                }
             }
             let accelerationPercentageInt = Int(accelerationPercentage * 100)
             label.text = "Accel: \(String(accelerationPercentageInt))%"
