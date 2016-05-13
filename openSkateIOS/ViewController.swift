@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     var initialTouchYCoord: CGFloat = 0.0
-    let neutralZoneRange = 30
+    let neutralZoneRange: CGFloat = 30.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +27,15 @@ class ViewController: UIViewController {
         } else {
             let yLocation = sender.locationInView(self.view).y
             let accelerationPercentage: CGFloat
-            if yLocation < initialTouchYCoord {
-                accelerationPercentage = (initialTouchYCoord - sender.locationInView(self.view).y) / initialTouchYCoord
-            } else {
+            let startPositiveYCoord = initialTouchYCoord - neutralZoneRange
+            let startNegativeYCoord = initialTouchYCoord + neutralZoneRange
+            if yLocation < startPositiveYCoord {
+                accelerationPercentage = (startPositiveYCoord - sender.locationInView(self.view).y) / (startPositiveYCoord)
+            } else if yLocation > startNegativeYCoord {
                 let viewHeight = self.view.frame.size.height
-                accelerationPercentage = -((sender.locationInView(self.view).y - initialTouchYCoord) / (viewHeight - initialTouchYCoord))
+                accelerationPercentage = -((sender.locationInView(self.view).y - startNegativeYCoord) / (viewHeight - startNegativeYCoord))
+            } else {
+                accelerationPercentage = 0.0
             }
             let accelerationPercentageInt = Int(accelerationPercentage * 100)
             label.text = "Accel: \(String(accelerationPercentageInt))%"
