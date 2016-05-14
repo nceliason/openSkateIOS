@@ -34,10 +34,9 @@ class ViewController: UIViewController {
             if yLocation < startPositiveYCoord && initialTouchYCoord > 3 * viewHeight/10 {
                 accelerationPercentage = (startPositiveYCoord - yLocation) / (startPositiveYCoord)
             } else if yLocation > startNegativeYCoord {
+                accelerationPercentage = -((yLocation - startNegativeYCoord) / (viewHeight - startNegativeYCoord))
                 if initialTouchYCoord > 7 * (viewHeight/10) {
-                    accelerationPercentage = -((yLocation - startNegativeYCoord) / (viewHeight - startNegativeYCoord)) * 0.5
-                } else {
-                    accelerationPercentage = -((yLocation - startNegativeYCoord) / (viewHeight - startNegativeYCoord))
+                    accelerationPercentage *= 0.5
                 }
             }
             let accelerationPercentageInt = Int(accelerationPercentage * 100)
