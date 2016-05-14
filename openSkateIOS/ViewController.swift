@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class ViewController: UIViewController {
     var initialTouchYCoord: CGFloat = 0.0
     let neutralZoneRange: CGFloat = 30.0
     var viewHeight: CGFloat = 0.0
+    var hasVibrated = false  // so out of range vibration only occurs once
+    let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.size.height
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,20 +29,35 @@ class ViewController: UIViewController {
             initialTouchYCoord = sender.locationInView(self.view).y
         } else if sender.state == .Ended {
             label.text = "Accel: 0%"
+            hasVibrated = false
         } else {
             let yLocation = sender.locationInView(self.view).y
             var accelerationPercentage: CGFloat = 0.0
             let startPositiveYCoord = initialTouchYCoord - neutralZoneRange
             let startNegativeYCoord = initialTouchYCoord + neutralZoneRange
-            if yLocation < startPositiveYCoord && initialTouchYCoord > 3 * viewHeight/10 {
-                accelerationPercentage = (startPositiveYCoord - yLocation) / (startPositiveYCoord)
+            
+            if yLocation < startPositiveYCoord {
+                if initialTouchYCoord > 3 * viewHeight/10 {
+                    accelerationPercentage = (startPositiveYCoord - yLocation) / (startPositiveYCoord)
+                } else {
+                    if !hasVibrated {
+                        // Vibrate to notify touch out of range
+                        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                        hasVibrated = true
+                    }
+                }
             } else if yLocation > startNegativeYCoord {
                 accelerationPercentage = -((yLocation - startNegativeYCoord) / (viewHeight - startNegativeYCoord))
                 if initialTouchYCoord > 7 * (viewHeight/10) {
                     accelerationPercentage *= 0.5
                 }
             }
-            let accelerationPercentageInt = Int(accelerationPercentage * 100)
+            var accelerationPercentageInt = Int(accelerationPercentage * 100)
+            
+            // Temporary fix for bug on IOS device (not simulator), goes up to 104% and down to only -97%
+            if accelerationPercentageInt > 100 {
+                accelerationPercentageInt = 100
+            }
             label.text = "Accel: \(String(accelerationPercentageInt))%"
         }
         
